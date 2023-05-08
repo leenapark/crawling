@@ -1,0 +1,28 @@
+영화 순위 페이지 추출하기
+
+1. 라이브러리
+  - requests
+  - bs4
+  - csv
+  - os
+  - datetime
+2. url로 request 요청, response 받기
+3. html parsing 하기 -> html text로 추출
+4. bs4 이용 soup 객체 생성
+5. soup 메서드로 원하는 데이터 추출
+
+update 내용
+현재 사이트 rank 안에 있는 title을 array에 추가한 후
+array 에 title 부분과 db에 저장 된 title 정보를 비교하여
+존재하지 않을 경우만 insert 실행
+존재 할 경우 update 실행
+
+
+변수 정의
+
+host = "localhost"
+user = "root"
+password = "django20230414"
+db = "movies_db"
+port = 3306
+charset = "UTF8"
