@@ -157,10 +157,18 @@ time.sleep(10)
 chrome_driver.close()
 
 
+
+chrome_driver.close()
+
+data_dir = "scrap_data/"
+
+if not os.path.exists(data_dir):
+    os.mkdir(data_dir)
+
+fname = f"{data_dir}naver_shopping_{val}.json"
+
+with open(fname, "w", encoding="UTF-8-sig") as f:
+   json.dump(objList, f, indent="\t", ensure_ascii=False)
    
-
-# 브라우저 전체
-# chrome.quit()
-
 
 
